@@ -10,6 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-go@v2
       - run: |
+          go get github.com/Noname-SA/claat-tool/claat
           go get golang.org/x/lint/golint
           # Install protobuf dependencies
           go get -u github.com/golang/protobuf/protoc-gen-go
