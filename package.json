@@ -12,7 +12,7 @@
   "author": "Google",
   "repository": {
     "type": "git",
-    "url": "https://github.com/googlecodelabs/tools.git"
+    "url": "https://github.com/Noname-SA/claat-tool.git"
   },
   "license": "Apache-2.0",
   "devDependencies": {

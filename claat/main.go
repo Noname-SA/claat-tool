@@ -16,7 +16,7 @@
 // specified as either Google Doc IDs or local markdown files.
 // The command also allows one to preview generated codelabs from local drive
 // using "claat serve".
-// See more details at https://github.com/googlecodelabs/tools.
+// See more details at https://github.com/Noname-SA/claat-tool.
 package main
 
 import (
@@ -29,11 +29,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/googlecodelabs/tools/claat/cmd"
+	"github.com/Noname-SA/claat-tool/claat/cmd"
 
 	// allow parsers to register themselves
-	_ "github.com/googlecodelabs/tools/claat/parser/gdoc"
-	_ "github.com/googlecodelabs/tools/claat/parser/md"
+	_ "github.com/Noname-SA/claat-tool/claat/parser/gdoc"
+	_ "github.com/Noname-SA/claat-tool/claat/parser/md"
 )
 
 var (
@@ -155,7 +155,7 @@ The following formats are built-in:
 - offline (plain HTML markup for offline consumption)
 
 Note that the built-in templates of the formats are not guaranteed to be stable.
-They can be found in https://github.com/googlecodelabs/tools/tree/master/claat/render.
+They can be found in https://github.com/Noname-SA/claat-tool/tree/master/claat/render.
 Please avoid using default templates in production. Use your own copies.
 
 To use a custom format, specify a local file path to a Go template file.

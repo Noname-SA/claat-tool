@@ -23,7 +23,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/googlecodelabs/tools/claat/nodes"
+	"github.com/Noname-SA/claat-tool/claat/nodes"
 	"golang.org/x/net/html"
 	"golang.org/x/net/html/atom"
 )

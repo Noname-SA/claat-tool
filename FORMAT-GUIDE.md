@@ -1,6 +1,6 @@
 # Codelab Formatting Guide
 
-Bug or feature request? File it [here](https://github.com/googlecodelabs/tools/issues).
+Bug or feature request? File it [here](https://github.com/Noname-SA/claat-tool/issues).
 
 ## Getting Started
 

@@ -110,7 +110,7 @@ We now store the built artifacts in a world-readable Google Cloud Storage bucket
 The manual process for deploying these artifacts is as follows:
 
 ```
-cd googlecodelabs/tools # start at repo level
+cd Noname-SA/claat-tool # start at repo level
 bazel build //... # build everything
 mkdir pkg
 cd pkg

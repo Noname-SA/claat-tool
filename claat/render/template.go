@@ -27,8 +27,8 @@ import (
 	htmlTemplate "html/template"
 	textTemplate "text/template"
 
-	mdParse "github.com/googlecodelabs/tools/claat/parser/md"
-	"github.com/googlecodelabs/tools/claat/types"
+	mdParse "github.com/Noname-SA/claat-tool/claat/parser/md"
+	"github.com/Noname-SA/claat-tool/claat/types"
 
 	_ "embed" // embeding template files
 )
