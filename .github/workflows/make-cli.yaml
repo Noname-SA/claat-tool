@@ -9,20 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-go@v2
-      - run: |
-          go get github.com/Noname-SA/claat-tool/claat
-          go get golang.org/x/lint/golint
-          # Install protobuf dependencies
-          go get -u github.com/golang/protobuf/protoc-gen-go
-          curl -OL https://github.com/google/protobuf/releases/download/v3.7.1/protoc-3.7.1-linux-x86_64.zip
-          sudo unzip -o protoc-3.7.1-linux-x86_64.zip -d /usr/local bin/protoc
-          sudo unzip -o protoc-3.7.1-linux-x86_64.zip -d /usr/local include/*
-          rm -f protoc-3.7.1-linux-x86_64.zip
-          # Dynamically get rest of Golang-specific dependencies
-          go get -t -d ./claat/...
-      - run: go generate
-        working-directory: ./claat/render
-      - run: make
+      - run: go build
         working-directory: ./claat
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
