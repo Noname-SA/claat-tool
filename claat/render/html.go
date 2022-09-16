@@ -175,7 +175,7 @@ func (hw *htmlWriter) text(n *nodes.TextNode) {
 }
 
 func (hw *htmlWriter) image(n *nodes.ImageNode) {
-	hw.writeString("<img")
+	hw.writeString("<img onClick='javascript:enlarge(this);'")
 	if n.Alt != "" {
 		hw.writeFmt(" alt=%q", n.Alt)
 	}
