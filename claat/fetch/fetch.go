@@ -132,6 +132,7 @@ func NewFetcher(at string, pm map[string]bool, rt http.RoundTripper) (*Fetcher, 
 // with nodes.ImportNode.
 func (f *Fetcher) SlurpCodelab(src string, output string) (*codelab, error) {
 	_, err := os.Stat(src)
+	fmt.Println("err:", err)
 	// Only setup oauth if this source is not a local file.
 	if os.IsNotExist(err) {
 		if f.authHelper == nil {
