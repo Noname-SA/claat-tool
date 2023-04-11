@@ -133,14 +133,14 @@ func NewFetcher(at string, pm map[string]bool, rt http.RoundTripper) (*Fetcher, 
 func (f *Fetcher) SlurpCodelab(src string, output string) (*codelab, error) {
 	_, err := os.Stat(src)
 	// Only setup oauth if this source is not a local file.
-	//if os.IsNotExist(err) {
-	//	if f.authHelper == nil {
-	//		f.authHelper, err = auth.NewHelper(f.authToken, auth.ProviderGoogle, f.roundTripper)
-	//		if err != nil {
-	//			return nil, err
-	//		}
-	//	}
-	//}
+	if os.IsNotExist(err) {
+		if f.authHelper == nil {
+			f.authHelper, err = auth.NewHelper(f.authToken, auth.ProviderGoogle, f.roundTripper)
+			if err != nil {
+				return nil, err
+			}
+		}
+	}
 	res, err := f.fetch(src)
 	if err != nil {
 		return nil, err
