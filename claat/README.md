@@ -16,10 +16,25 @@ Alternatively, if you have [Go installed](https://golang.org/doc/install):
 
     go install github.com/Noname-SA/claat-tool/claat@latest
 
+
 If none of the above works, compile the tool from source following Dev workflow
 instructions below.
 
 ## Dev workflow
+
+Workaround for some Go version issues & .sh permission errors
+
+1. Clone this repo into a nn-tools directory `git clone https://github.com/Noname-SA/claat-tool.git nn-tools`
+
+2. Navigate to the claat command directory `cd nn-tools/claat`
+
+3. Build the claat command `go build .` This will create a `claat` command executable that you can use.
+
+4. Now update youur PATH env variable, using the default mac terminal, the command is `vi ~/.zshrc`
+
+5. To edit the file press `i` and then insert this line at the end `export PATH=$PATH:$HOME/na-tools/claat` and then hit `ESC` and type `:x` to save and exit.
+
+6. Now open a NEW terminal window and type `claat`, should be working.
 
 **Prerequisites**
 
